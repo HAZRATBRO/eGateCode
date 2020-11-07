@@ -1,0 +1,30 @@
+.container{
+    width:50%;
+    margin:20px auto;
+}
+h1{
+    margin-top: -24%;
+    margin-left: 31%;
+    font-weight: 600;
+    color: #929292;
+}
+.card{
+    
+    margin:10%;
+    box-shadow: 0 4px 8px 0 rgba(0,211, 255, 0.2), 0 6px 20px 0 rgba(0, 222, 223, 0.19);
+    text-align: center;  
+    transition: 0.3s;  
+    display: block  ;
+    height: 278px;
+    width: 552px;
+    border-radius: 30px;
+    
+}
+canvas{
+    margin-left: 14%;
+}
+
+h2{
+    color:#929292;
+    font-size: 27px;
+}

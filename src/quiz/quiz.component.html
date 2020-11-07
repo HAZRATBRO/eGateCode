@@ -1,0 +1,147 @@
+<div class="header"><img src="../assets/logo.jfif" ></div>
+<div id="button"> MECHANICAL ENGINEERING </div>
+<!-- <div class="navigate"> 
+    <div class="left">   
+        <a href="#" class="previous round">&#8250;</a>
+     <div class="container">Some Text</div>
+    </div>
+
+    <a href="#" class="previous round">&#8249;</a>
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <img src="https://img.icons8.com/ultraviolet/24/000000/calculator.png"/>
+</div> -->
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+            <img class="toggle" src="../assets/previous.png"></a>
+      </div>
+      <!-- <ul class="nav navbar-nav">
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+      </ul> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><img class="toggle" src="../assets/next.png"/></a></li>
+        <li><a  [routerLink]=""><img class="toggle" data-toggle="modal" data-target="#calc" src="../assets/calc.png"/></a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- <div>Add Section here</div>   -->
+<nav class="navbar navbar-default question-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <p class="navbar-brand info">
+            {{quiz.section}}</p>
+      </div>
+       
+      <ul class="nav navbar-nav navbar-right">
+         
+        <li><p class="navbar-brand info">
+           TIME LEFT : {{timer}} mins</p></li>
+      </ul>
+    </div>
+  </nav>  
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="" (click)="toggleQuestion(-1)">
+            <img class="toggle" src="../assets/previous.png"></a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a id = "sub_name" href="#">MECHANICAL</a></li>
+        <li><a id="sub1" href="#">MECHANICAL</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="" (click)="toggleQuestion(1)"><img class="toggle" src="../assets/next.png"/></a></li>
+        <li><a href="#"><img class="toggle" src="../assets/timer.png"/></a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <nav class="navbar navbar-default question-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <p class="navbar-brand info-first">
+            QUESTION TYPE : {{quiz.type}}</p>
+      </div>
+       
+      <ul class="nav navbar-nav navbar-right">
+        <li><p class="navbar-brand info">
+            Correct Answer : {{quiz.marks}} |</p></li>
+        <li><p class="navbar-brand info">
+            Incorrect Answer : {{quiz.negativeMarks}}</p></li>
+      </ul>
+    </div>
+  </nav>  
+
+  <nav class="navbar navbar-default question-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <p class="navbar-brand info-number">
+            QUESTION No. {{index}}</p>
+      </div>
+       
+      
+    </div>
+  </nav>  
+  
+  <nav class="navbar navbar-default question-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <img src="../assets/{{quiz.question}}" *ngIf="quiz.questionImage; else showText">
+      <ng-template #showText>
+          <p>
+              {{quiz.question}}
+          </p>
+          <img src="../assets/{{quiz.img}}" *ngIf="quiz.img">
+      </ng-template>
+    </div>
+       <ul class="nav navbar-nav checkBoxOpt" *ngIf="quiz.optionsType === 'checkBox'">
+        <li *ngFor="let option of quiz.options ; let i=index">
+        <div class="checkbox">
+          <label>  
+            <input type="checkbox" >  
+          </label>
+          <img src="../assets/{{quiz.options[i][options[i]]}}" *ngIf="quiz.options[i][options[i]].includes('image'); else showOption">
+          <ng-template #showOption>
+            <p>
+                {{quiz.options[i][options[i]]}}
+            </p>
+            </ng-template>
+        </div>
+        </li><br/>
+       </ul>
+       
+       <ul class="nav navbar-nav checkBoxOpt" *ngIf="quiz.optionsType === 'radio'">
+        <li *ngFor="let option of quiz.options ; let i=index">
+        <div class="radio">
+          <label *ngIf="!quiz.options[i][options[i]].includes('image')">  
+            <input type="radio" name="radio"> {{quiz.options[i][options[i]]}}  
+          </label>
+          <img src="../assets/{{quiz.options[i][options[i]]}}" *ngIf="quiz.options[i][options[i]].includes('image')"> 
+        </div>
+        </li><br/>
+       </ul>
+      
+    </div>
+  </nav>  
+
+  <nav class="navbar navbar-default question-nav">
+    <div class="container-fluid">
+      <div id="btn-nav" class="navbar-header">
+        <button class="button button1">Mark For Review & Next</button>
+        <button class="button button1">Clear Response</button>
+        
+        <button class="button button2">Save & Next</button>
+      </div>
+      
+                
+      
+    </div>
+  </nav>  
+
+  <app-calculator id="calc" class="modal fade bootstrap-dialog-draggable" role="dialog"></app-calculator>
+   

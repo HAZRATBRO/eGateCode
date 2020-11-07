@@ -1,0 +1,41 @@
+ 
+ <div class='parent'>
+      <div class='header'>
+    <h1 class="display-4">{{subject.title}}</h1>
+ </div>
+ <nav class="navbar">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li *ngFor="let topic of titleList;let i=index;">
+            <a  class="animating-link" (click)="changeContent(topic)">
+                Topic {{i+1}}
+            </a>
+        </li>
+      </ul>
+       
+    </div>
+  </nav>
+  <div class='header'>
+    <h3 class="display-4"  [ngClass]='pulsingText' (animationend)="pulsingText.pulsing=false">{{title.title}} :</h3>
+ </div>
+<div class="float-container" *ngFor="let image of post.postImgUrl;let i = index">
+ <div class="float-child">
+     <div class='green'><img class='float-img' [ngClass]='pulsingText' (animationend)="pulsingText.pulsing=false" src='{{image}}'/></div>
+ </div> 
+ <div class="float-child blue">
+    <div>
+        <p [ngClass]='pulsingText' (animationend)="pulsingText.pulsing=false">{{post.postContent[i]}}</p>
+    </div>
+ </div>
+</div>
+
+ <nav aria-label="Subjects">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" [routerLink]='' (click)="changeComponent(-1)">Previous</a></li>
+      <li class="page-item"><a class="page-link" [routerLink]='' (click)="changeComponent(1)">Next</a></li>   
+    </ul>
+  </nav>  
+</div>
+
+
+ 

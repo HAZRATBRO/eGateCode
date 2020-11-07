@@ -1,0 +1,79 @@
+#topics{
+    width:25%;
+    padding-bottom: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 10px auto;
+    position: relative;
+    text-align:center;
+}
+.header{
+    display: inline;
+
+}
+.header p{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 600;
+}
+#panel{
+    width:91%;
+}
+.panel-heading{
+    background-color: #fff;
+    float: left;
+    border-color: #fff;
+}
+#left{
+    float: left;
+}
+ .head{
+    font-weight: 600;
+    width:10%;
+    font-size:xx-large;
+}
+.first{
+    width: 62%;
+    margin-left: 19%;
+    margin-right: 15%;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding:10px 68px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    
+    border-radius: 30px;
+    font-size:large;
+    font-weight: 700;
+  }
+.button1{
+ margin-left:39.8%;
+}
+.button2{
+    margin-left:57%;
+}
+  .button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .panel-default{
+      border-color: #fff;
+  }
+   

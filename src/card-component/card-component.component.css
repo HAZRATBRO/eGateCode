@@ -1,0 +1,44 @@
+ 
+.card{
+     
+    margin:auto;
+    box-shadow: 0 4px 8px 0 rgba(0,211, 255, 0.2), 0 6px 20px 0 rgba(0, 222, 223, 0.19);
+    text-align: center;  
+    transition: 0.3s;  
+    display: block  ;
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+a.Card,
+a.Card:hover {
+  color: #212529;
+  text-decoration: none;
+}
+ 
+.card:hover {
+    background-color: #01ff78;
+    color: black;
+    text-decoration: none;
+  }
+  h6.card-title{
+      height:110px
+  }
+h4{
+    font-weight: 750;
+}
+img {
+    position: relative;
+    top: -110px;
+    left: -1px;
+  }
+
+circle{
+    transition: 0.3s;  
+}  
+.card:hover circle {
+    fill : black;
+    
+}
+

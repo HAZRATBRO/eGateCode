@@ -1,0 +1,17 @@
+<div class="header"><p >{{title}} ONLINE COURSES</p></div>
+<div id="button">  
+    <button class="button button1">{{points.message}}</button>
+</div>
+<div id="content">
+    <p>GENERAL FEATURES</p>
+    <ol class="details">
+        <li *ngFor="let detail of points.details">{{detail}}</li>
+      </ol>
+      <p>What You'll Get in Complete Course</p>
+      <ol class="details">
+        <li *ngFor="let course of points.complete_course">{{course}}</li>
+      </ol>  
+    </div>
+    <div id="btn">  
+        <button class="button pay">BUY NOW</button>
+       </div>

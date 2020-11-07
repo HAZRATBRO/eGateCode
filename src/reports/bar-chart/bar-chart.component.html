@@ -1,0 +1,15 @@
+<div>
+    <div style="width:140%">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              [colors]="chartColors">
+      </canvas>
+    </div>
+  </div>
+  <!-- <div id="chartContainer" style="height: 370px; width: 100%;"></div> -->
+
+  <button (click)="updateData()">Next</button>

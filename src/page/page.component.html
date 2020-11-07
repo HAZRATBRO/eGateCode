@@ -1,0 +1,43 @@
+<div class="header"><p >ONLINE COURSES</p></div>
+<div id="panel" class="panel panel-default " class="first">
+    <div class="panel-heading" > 
+         <p class="head">GATE</p>
+        <p >BUY INDIVIDUAL PACKAGES</p>
+      
+    </div>
+    <div id="button">  
+        <button (click)="buyComplete('GATE')" class="button button1">BUY COMPLETE</button>
+       </div>
+  </div>
+ <div class="container">
+<div (click)="buyComplete('',cardData)" id="topics" *ngFor="let cardData of gate" >
+<app-card-component [cardData]="cardData"></app-card-component>
+</div>
+
+<!-- <div class="header"><p id="left-header">IPATE</p> </div><br/> -->
+<div id="panel" class="panel panel-default">
+    <div class="panel-heading"> 
+        <p class="head">IPATE</p>
+        <p >BUY INDIVIDUAL PACKAGES</p>
+        <!-- <button id ="right"class="button button1">BUY COMPLETE COURSE</button> -->
+    </div>
+    <div id="button">  
+        <button   (click)="buyComplete('IPATE')" class="button button2">BUY COMPLETE</button>
+       </div>
+  </div>
+
+<div (click)="buyComplete('',cardData)" id="topics" *ngFor="let cardData of ipate" >
+    <app-card-component [cardData]="cardData"></app-card-component>
+    </div>
+    <div id="panel" class="panel panel-default">
+        <div class="panel-heading"> 
+            <h2 id="left" class="head">
+                PSU
+            </h2>
+        </div>
+      </div>
+
+<div id="topics" *ngFor="let cardData of psu" >
+<app-card-component [cardData]="cardData"></app-card-component>
+</div>    
+ </div>
